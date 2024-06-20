@@ -52,9 +52,6 @@ python app.py
 ```
 
 ## Demo
+![Demo](Demo/LLM_CSV_Retrival_or_Search.gif)
 
-  <video width="800" height="360" controls>
-    <source src="Demo/NSL_SEARCH_RAG.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
 
