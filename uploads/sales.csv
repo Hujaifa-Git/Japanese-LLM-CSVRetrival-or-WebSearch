@@ -1,0 +1,11 @@
+product_id,product_name_jp,product_name_en,category,price_yen,quantity_sold,region,date
+001, ソニーワイヤレスヘッドホン, Sony Wireless Headphones, Electronics, 24900, 15, Kanto, 2024-02-28
+002, 任天堂スイッチ, Nintendo Switch, Gaming, 35000, 8, Tohoku, 2024-02-27
+003, 鬼滅の刃 (1巻), Demon Slayer Vol.1, Manga, 550, 25, Kansai, 2024-02-25
+004, 無印良品ボールペン, Muji Pen, Stationery, 120, 50, Kyushu, 2024-02-22
+005, ユニクロ ヒートテック Tシャツ, Uniqlo Heattech T-Shirt, Clothing, 1500, 30, Hokkaido, 2024-02-20
+006, パナソニック 冷蔵庫, Panasonic Refrigerator, Appliances, 80000, 2, Chugoku, 2024-02-18
+007, 日清カップヌードル, Nissin Cup Noodle, Food & Drinks, 190, 100, Chubu, 2024-02-16
+008, 花王 メリット シャンプー, Kao Merit Shampoo, Personal Care, 450, 20, Shikoku, 2024-02-14
+009, 東急ハンズ 旅行カバン, Tokyu Hands Travel Bag, Travel Goods, 12000, 5, Okinawa, 2024-02-12
+010, シャープ プラズマクラスター空気清浄機, Sharp Plasmacluster Air Purifier, Home Electronics, 30000, 3, Kita-Kyushu, 2024-02-10

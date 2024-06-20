@@ -1,0 +1,23 @@
+Date,Product,Category,Quantity,Price,Total
+2024-04-01,Product A,Electronics,10,50.00,500.00
+2024-04-01,Product B,Clothing,5,30.00,150.00
+2024-04-02,Product C,Home,8,20.00,160.00
+2024-04-02,Product D,Electronics,3,100.00,300.00
+2024-04-03,Product E,Clothing,10,25.00,250.00
+2024-04-03,Product F,Home,15,15.00,225.00
+2024-04-04,Product G,Electronics,7,70.00,490.00
+2024-04-04,Product H,Clothing,4,40.00,160.00
+2024-04-05,Product I,Home,12,12.50,150.00
+2024-04-05,Product J,Electronics,6,80.00,480.00
+2024-04-06,Product K,Clothing,9,35.00,315.00
+2024-04-06,Product L,Home,10,22.00,220.00
+2024-04-07,Product M,Electronics,5,55.00,275.00
+2024-04-07,Product N,Clothing,8,28.00,224.00
+2024-04-08,Product O,Home,14,18.00,252.00
+2024-04-08,Product P,Electronics,2,120.00,240.00
+2024-04-09,Product Q,Clothing,6,32.00,192.00
+2024-04-09,Product R,Home,11,16.00,176.00
+2024-04-10,Product S,Electronics,4,90.00,360.00
+2024-04-10,Product T,Clothing,3,27.00,81.00
+2024-04-11,Product U,Home,9,19.00,171.00
+2024-04-11,Product V,Electronics,7,75.00,525.00

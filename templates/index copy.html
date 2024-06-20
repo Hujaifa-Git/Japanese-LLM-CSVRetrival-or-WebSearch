@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSV File Uploader</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Upload CSV File</h1>
+        <p>Upload a CSV file to start answering questions! If your question is related to the CSV, then the answer will be provided according to your private data. If not then the answer will be given from the WEB</p>
+        <form id="upload-form" method="POST" enctype="multipart/form-data">
+            <input type="file" name="csv_file" accept=".csv">
+            <button type="submit" id="upload-btn">Upload</button>
+        </form>
+    </div>
+
+    <div class="chat-container" id="chat-container" style="display: none;">
+        <h1>JP Search RAG</h1>
+        <div class="chat-body" id="chat-body"></div>
+        <div id="chat-messages"></div>
+        <div class="chat-input">
+            <input class="text-box" type="text" id="user-input" placeholder="Type your query..." onkeypress="handleKeyPress(event)">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script>
+        function handleKeyPress(event) {
+            if (event.key === 'Enter') {
+                sendMessage();
+            }
+        }
+
+        function sendMessage() {
+            var userInput = document.getElementById('user-input').value;
+            var chatMessages = document.getElementById('chat-messages');
+
+            if (userInput !== '') {
+                chatMessages.innerHTML += '<div class="message user-message">' + userInput + '</div>';
+                document.getElementById('user-input').value = '';
+                fetch('/get_response', {
+                    method: 'POST',
+                    body: JSON.stringify({message: userInput}),
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    chatMessages.innerHTML += '<div class="message bot-message">' + data.response + '</div>';
+                });
+            }
+        }
+
+        document.getElementById('upload-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+            var formData = new FormData(this); // Create FormData object from form
+            fetch('/', { // Send form data to the server using fetch
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (response.ok) {
+                    document.getElementById('chat-container').style.display = 'block'; // Show chat container
+                    return response.text(); // Return response text
+                } else {
+                    throw new Error('File upload failed');
+                }
+            })
+            .then(data => console.log(data)) // Log response text
+            .catch(error => console.error(error)); // Log any errors
+        });
+    </script>
+</body>
+</html>
